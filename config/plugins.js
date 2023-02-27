@@ -14,4 +14,17 @@ module.exports = ({ env }) => ({
       },
     },
   },
+  "netlify-deployments": {
+    enabled: true,
+    config: {
+      accessToken: env('TOKEN_NETLIFY'),
+      sites: [
+        {
+          name: 'effulgent-sorbet-97d0de',
+          id: "2eff04a5-6fd6-43b1-803c-9e0e0ff385ec",
+          branch: 'master' // optional
+        }
+      ]
+    },
+  },
 });
